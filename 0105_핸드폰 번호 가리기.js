@@ -7,6 +7,18 @@
 // 전체 입력된 숫자중 맨 뒤 4자리를 세어야 함.
 // 그 앞의 숫자는 문자열갯수만큼 *로 가려서 표기
 
+// for, replace
+
+function solutionA(phone_number) {
+  for (let i = 0; i < phone_number.length - 4; i++) {
+    phone_number = phone_number.replace(phone_number[i], "*");
+  }
+  return phone_number;
+}
+
+console.log(solutionA("01033334444"));
+console.log(solutionA("027778888"));
+
 // for, if
 
 function solution(phone_number) {
