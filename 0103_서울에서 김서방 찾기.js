@@ -5,23 +5,23 @@
 let seoul = ["jane", "Kim"];
 
 function solution(seoul) {
-  let answer = ''
+  let answer = "";
 
-  for (let i = 0; i < seoul.length; i++){
-    if (seoul[i] == "Kim"){
+  for (let i = 0; i < seoul.length; i++) {
+    if (seoul[i] == "Kim") {
       answer = `김서방은 ${i}에 있다`;
     }
   }
-  return answer
+  return answer;
 }
 
 // console.log(solution(seoul)); // 1번 째 반환
 
 //.indexOf
 function solution(seoul) {
-  return "김서방은 " + seoul.indexOf('Kim') + "에 있다";
+  return "김서방은 " + seoul.indexOf("Kim") + "에 있다";
 }
 
 // findIndex()
-const solution = (seoul) => 
-`김서방은 ${seoul.findIndex(s => s === 'Kim')}에 있다`;
+const solution = (seoul) =>
+  `김서방은 ${seoul.findIndex((s) => s === "Kim")}에 있다`;

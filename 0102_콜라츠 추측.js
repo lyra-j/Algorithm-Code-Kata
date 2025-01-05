@@ -9,14 +9,14 @@
 function solution(num) {
   let answer = 0;
 
-  for (let i = 0; i < 500; i++){
-    if (num != 1){
-      num = num %2 == 0 ? num / 2 : num * 3 + 1;
-    } else { 
-      return answer = i;
+  for (let i = 0; i < 500; i++) {
+    if (num != 1) {
+      num = num % 2 == 0 ? num / 2 : num * 3 + 1;
+    } else {
+      return (answer = i);
     }
   }
-  return answer = -1;
+  return (answer = -1);
 }
 
 console.log(solution(6)); // 8
@@ -24,12 +24,12 @@ console.log(solution(16)); // 4
 console.log(solution(626331)); // -1
 
 // while
-function collatz(num){
+function collatz(num) {
   let count = 0;
 
-  while(num != 1 && count != 500){
-    num % 2 == 0 ? num = num / 2 : num = num * 3 + 1;
-    count ++;
+  while (num != 1 && count != 500) {
+    num % 2 == 0 ? (num = num / 2) : (num = num * 3 + 1);
+    count++;
   }
   return num == 1 ? count : -1;
 }
@@ -39,8 +39,12 @@ console.log(collatz(16)); // 4
 console.log(collatz(626331)); // -1
 
 // 다른 사람의 풀이
-function collatz2(num, count = 0){
-  return num == 1 ? (count >= 500 ? -1 : count) : collatz2(num % 2 == 0 ? num / 2 : num * 3 + 1,++count);
+function collatz2(num, count = 0) {
+  return num == 1
+    ? count >= 500
+      ? -1
+      : count
+    : collatz2(num % 2 == 0 ? num / 2 : num * 3 + 1, ++count);
 }
 
 console.log(collatz2(6)); // 8
