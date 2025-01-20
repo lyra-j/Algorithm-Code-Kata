@@ -22,7 +22,7 @@ console.log(solution([5, 8, 4, 0, 6, 7, 9])); // 4
 function solutionA(numbers) {
   let result = 0;
 
-  // 1~9까지의 숫자중에서 이기 떄문에 배열의 길이로 조건의 제한을 하지 않음.
+  // 1~9까지의 숫자중에서 이기 떄문에 1부터 시작하고 배열의 길이로 조건의 제한을 하지 않음.
   for (let j = 1; j <= 9; j++) {
     if (!numbers.includes(j)) {
       result += j;
